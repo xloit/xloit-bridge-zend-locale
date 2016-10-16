@@ -17,17 +17,11 @@
 
 /**
  * A {@link \Bootstrap} class
- *
- * @author Yudha Setiawan <me@yudhasetiawan.com>
- * @since  0.0.1
  */
 class Bootstrap
 {
     /**
      *
-     *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
      *
      * @var Bootstrap
      */
@@ -36,9 +30,6 @@ class Bootstrap
     /**
      *
      *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
-     *
      * @var array
      */
     protected $namespaces = [];
@@ -46,18 +37,12 @@ class Bootstrap
     /**
      *
      *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
-     *
      * @var array
      */
     protected $classMap = [];
 
     /**
      *
-     *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
      *
      * @return array
      */
@@ -68,9 +53,6 @@ class Bootstrap
 
     /**
      * Unregister this instance as an autoloader.
-     *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
      *
      * @return void
      */
@@ -86,9 +68,6 @@ class Bootstrap
 
     /**
      * Loads the given class or interface.
-     *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
      *
      * @param string $class
      *
@@ -110,9 +89,6 @@ class Bootstrap
 
     /**
      * Finds the path to the file where the class is defined.
-     *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
      *
      * @param string $class
      *
@@ -143,9 +119,6 @@ class Bootstrap
 
     /**
      *
-     *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
      *
      * @param string $class
      * @param string $ext
@@ -189,9 +162,6 @@ class Bootstrap
     /**
      *
      *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
-     *
      * @throws \RuntimeException
      * @return self
      */
@@ -202,9 +172,6 @@ class Bootstrap
 
     /**
      *
-     *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
      *
      * @throws \RuntimeException
      * @return self
@@ -245,9 +212,6 @@ class Bootstrap
      * Registers a set of namespaces directories for a given prefix, replacing any others previously set for this
      * prefix.
      *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
-     *
      * @param string       $prefix
      * @param array|string $paths
      *
@@ -260,9 +224,6 @@ class Bootstrap
 
     /**
      *
-     *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
      *
      * @param array $classMap
      *
@@ -277,9 +238,6 @@ class Bootstrap
 
     /**
      * Register this instance as an autoloader.
-     *
-     * @since  0.0.1
-     * @author Yudha Setiawan <me@yudhasetiawan.com>
      *
      * @param bool $prepend
      *

@@ -20,7 +20,6 @@ namespace Xloit\Bridge\Zend\Locale\Resolver;
 /**
  * A {@link ResolverInterface} interface.
  *
- * @since   0.0.1
  * @package Xloit\Bridge\Zend\Locale\Resolver
  */
 interface ResolverInterface
@@ -28,7 +27,6 @@ interface ResolverInterface
     /**
      *
      *
-     * @since 0.0.1
      * @return string
      */
     public function resolve();

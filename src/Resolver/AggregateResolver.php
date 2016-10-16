@@ -25,7 +25,6 @@ use Zend\Stdlib\PriorityQueue;
 /**
  * An {@link AggregateResolver} class.
  *
- * @since   0.0.1
  * @package Xloit\Bridge\Zend\Locale\Resolver
  */
 class AggregateResolver implements Countable, IteratorAggregate, ResolverInterface
@@ -33,7 +32,6 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
     /**
      *
      *
-     * @since 0.0.1
      * @var string
      */
     const FAILURE_NO_RESOLVERS = 'AggregateResolver::FailureNoResolvers';
@@ -41,7 +39,6 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
     /**
      *
      *
-     * @since 0.0.1
      * @var string
      */
     const FAILURE_NOT_FOUND = 'AggregateResolver::FailureNotFound';
@@ -49,7 +46,6 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
     /**
      * Last lookup failure
      *
-     * @since 0.0.1
      * @var false|string
      */
     protected $lastFailure = false;
@@ -57,7 +53,6 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
     /**
      *
      *
-     * @since 0.0.1
      * @var ResolverInterface
      */
     protected $lastSuccessfulResolver;
@@ -65,15 +60,12 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
     /**
      *
      *
-     * @since 0.0.1
      * @var PriorityQueue
      */
     protected $queue;
 
     /**
      * Constructor to prevent {@link AggregateResolver} from being loaded more than once.
-     *
-     * @since 0.0.1
      */
     public function __construct()
     {
@@ -85,7 +77,6 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
      *
      * @link  http://php.net/manual/en/iteratoraggregate.getiterator.php
      *
-     * @since 0.0.1
      * @return Traversable An instance of an object implementing {@link \Iterator} or {@link Traversable}
      */
     public function getIterator()
@@ -98,7 +89,6 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
      *
      * @link  http://php.net/manual/en/countable.count.php
      *
-     * @since 0.0.1
      * @return int The custom count as an integer. The return value is cast to an integer.
      */
     public function count()
@@ -112,7 +102,6 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
      * @param  ResolverInterface $resolver
      * @param  int               $priority
      *
-     * @since 0.0.1
      * @return static
      */
     public function attach(ResolverInterface $resolver, $priority = 1)
@@ -125,7 +114,6 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
     /**
      * Return the last successful resolver, if any.
      *
-     * @since 0.0.1
      * @return ResolverInterface
      */
     public function getLastSuccessfulResolver()
@@ -136,7 +124,6 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
     /**
      * Get last failure.
      *
-     * @since 0.0.1
      * @return false|string
      */
     public function getLastFailure()
@@ -147,7 +134,6 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
     /**
      *
      *
-     * @since 0.0.1
      * @return string
      */
     public function resolve()

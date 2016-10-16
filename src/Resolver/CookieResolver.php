@@ -22,7 +22,6 @@ use Zend\Http\Request;
 /**
  * A {@link CookieResolver} class.
  *
- * @since   0.0.1
  * @package Xloit\Bridge\Zend\Locale\Resolver
  */
 class CookieResolver implements ResolverInterface
@@ -30,15 +29,13 @@ class CookieResolver implements ResolverInterface
     /**
      *
      *
-     * @since 0.0.1
      * @var string
      */
-    const DEFAULT_COOKIE_NAME = 'xloit.locale';
+    const DEFAULT_COOKIE_NAME = 'xo.locale';
 
     /**
      *
      *
-     * @since 0.0.1
      * @var Request
      */
     protected $request;
@@ -46,15 +43,12 @@ class CookieResolver implements ResolverInterface
     /**
      *
      *
-     * @since 0.0.1
      * @var string
      */
     protected $cookieName;
 
     /**
      * Constructor to prevent {@link CookieResolver} from being loaded more than once.
-     *
-     * @since 0.0.1
      *
      * @param Request $request
      * @param string  $cookieName
@@ -71,13 +65,11 @@ class CookieResolver implements ResolverInterface
     /**
      *
      *
-     * @since 0.0.1
      * @return string
      */
     public function resolve()
     {
-        /** @noinspection TypeUnsafeComparisonInspection */
-        if (PHP_SAPI == 'cli') {
+        if (PHP_SAPI === 'cli') {
             // not supported on console
             return false;
         }
@@ -96,7 +88,6 @@ class CookieResolver implements ResolverInterface
     /**
      *
      *
-     * @since 0.0.1
      * @return Request
      */
     public function getRequest()
@@ -106,8 +97,6 @@ class CookieResolver implements ResolverInterface
 
     /**
      *
-     *
-     * @since 0.0.1
      *
      * @param Request $request
      *
@@ -123,7 +112,6 @@ class CookieResolver implements ResolverInterface
     /**
      *
      *
-     * @since 0.0.1
      * @return string
      */
     public function getCookieName()
@@ -133,8 +121,6 @@ class CookieResolver implements ResolverInterface
 
     /**
      *
-     *
-     * @since 0.0.1
      *
      * @param string $cookieName
      *
