@@ -1,38 +1,38 @@
 {
-    "name": "xloit/xloit-bridge-zend-locale",
-    "type": "library",
-    "description": "Xloit Bridge Zend Locale Library",
-    "keywords": [
-        "xloit",
-        "bridge-zend-locale",
-        "library"
-    ],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Yudha Setiawan",
-            "email": "me@yudhasetiawan.com",
-            "homepage": "http://yudhasetiawan.com/"
-        }
-    ],
-    "require": {
-        "php": "^5.4 || ^7.0",
-        "zendframework/zend-stdlib": "^2.7 || ^3.0",
-        "zendframework/zend-http": "^2.5"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "~4.0"
-    },
-    "suggest": {
-    },
-    "autoload": {
-        "psr-4": {
-            "Xloit\\Bridge\\Zend\\Locale\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-0": {
-            "Xloit\\Bridge\\Zend\\Locale\\Test\\": "tests/"
-        }
+  "name": "xloit/xloit-bridge-zend-locale",
+  "type": "library",
+  "description": "Xloit Bridge Zend Locale Library",
+  "keywords": [
+    "xloit",
+    "bridge-zend-locale",
+    "library"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Yudha Setiawan",
+      "email": "me@yudhasetiawan.com",
+      "homepage": "http://yudhasetiawan.com/"
     }
+  ],
+  "require": {
+    "php": "^5.4 || ^7.0",
+    "zendframework/zend-stdlib": "^2.7 || ^3.0",
+    "zendframework/zend-http": "^2.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0"
+  },
+  "suggest": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Xloit\\Bridge\\Zend\\Locale\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-0": {
+      "Xloit\\Bridge\\Zend\\Locale\\Test\\": "tests/"
+    }
+  }
 }
