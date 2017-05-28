@@ -65,29 +65,6 @@ class CookieResolver implements ResolverInterface
     /**
      *
      *
-     * @return string
-     */
-    public function resolve()
-    {
-        if (PHP_SAPI === 'cli') {
-            // not supported on console
-            return false;
-        }
-
-        /** @var $cookie \Zend\Http\Header\Cookie */
-        $cookie     = $this->getRequest()->getCookie();
-        $cookieName = $this->getCookieName();
-
-        if (array_key_exists($cookieName, $cookie)) {
-            return $cookie[$cookieName];
-        }
-
-        return null;
-    }
-
-    /**
-     *
-     *
      * @return Request
      */
     public function getRequest()
@@ -100,7 +77,7 @@ class CookieResolver implements ResolverInterface
      *
      * @param Request $request
      *
-     * @return static
+     * @return $this
      */
     public function setRequest($request)
     {
@@ -124,12 +101,35 @@ class CookieResolver implements ResolverInterface
      *
      * @param string $cookieName
      *
-     * @return static
+     * @return $this
      */
     public function setCookieName($cookieName)
     {
         $this->cookieName = $cookieName;
 
         return $this;
+    }
+
+    /**
+     *
+     *
+     * @return string
+     */
+    public function resolve()
+    {
+        if (PHP_SAPI === 'cli') {
+            // not supported on console
+            return false;
+        }
+
+        /** @var $cookie \Zend\Http\Header\Cookie */
+        $cookie     = $this->getRequest()->getCookie();
+        $cookieName = $this->getCookieName();
+
+        if (array_key_exists($cookieName, $cookie)) {
+            return $cookie[$cookieName];
+        }
+
+        return null;
     }
 }

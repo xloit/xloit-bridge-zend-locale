@@ -44,7 +44,7 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
     const FAILURE_NOT_FOUND = 'AggregateResolver::FailureNotFound';
 
     /**
-     * Last lookup failure
+     * Last lookup failure.
      *
      * @var false|string
      */
@@ -77,7 +77,7 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
      *
      * @link  http://php.net/manual/en/iteratoraggregate.getiterator.php
      *
-     * @return Traversable An instance of an object implementing {@link \Iterator} or {@link Traversable}
+     * @return Traversable An instance of an object implementing {@link \Iterator} or {@link Traversable}.
      */
     public function getIterator()
     {
@@ -99,10 +99,10 @@ class AggregateResolver implements Countable, IteratorAggregate, ResolverInterfa
     /**
      * Attach a resolver.
      *
-     * @param  ResolverInterface $resolver
-     * @param  int               $priority
+     * @param ResolverInterface $resolver
+     * @param int               $priority
      *
-     * @return static
+     * @return $this
      */
     public function attach(ResolverInterface $resolver, $priority = 1)
     {
